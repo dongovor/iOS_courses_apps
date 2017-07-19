@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TemperatureCalc" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Temperature Calculator" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7nj-OV-lnI">
+                                <rect key="frame" x="16" y="20" width="288" height="64"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="0jV-Id-nKd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Kailasa-Bold" family="Kailasa" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9BF-Se-qX4">
+                                <rect key="frame" x="25" y="140" width="270" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="E6s-pT-wUt"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                                <connections>
+                                    <action selector="calculate:" destination="BYZ-38-t0r" eventType="editingDidEndOnExit" id="XPe-yB-9Mh"/>
+                                </connections>
+                            </textField>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Temp1" translatesAutoresizingMaskIntoConstraints="NO" id="XOP-Hr-9vi">
+                                <rect key="frame" x="25" y="178" width="270" height="278"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 Celsius" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gl9-en-7BF">
+                                <rect key="frame" x="16" y="462" width="288" height="64"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="4JH-Wi-ecJ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Kailasa-Bold" family="Kailasa" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter Fahrenheit" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ruk-tr-03J">
+                                <rect key="frame" x="16" y="104" width="288" height="33"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="33" id="lmL-q8-xVu"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Kailasa-Bold" family="Kailasa" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="N68-VJ-xKC">
+                                <rect key="frame" x="16" y="532" width="288" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="V0u-wM-p8B"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="Calculate to C"/>
+                                    <segment title="Calculate to F"/>
+                                </segments>
+                                <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="changeCalculation:" destination="BYZ-38-t0r" eventType="valueChanged" id="Ghu-Z3-Izk"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="N68-VJ-xKC" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="2nw-Vo-ZZc"/>
+                            <constraint firstItem="Gl9-en-7BF" firstAttribute="top" secondItem="XOP-Hr-9vi" secondAttribute="bottom" constant="6" id="6y9-Bn-avX"/>
+                            <constraint firstItem="Gl9-en-7BF" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="HLm-iw-hqS"/>
+                            <constraint firstItem="XOP-Hr-9vi" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="9" id="PId-R1-qYb"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="9BF-Se-qX4" secondAttribute="trailing" constant="9" id="POz-g4-xVc"/>
+                            <constraint firstItem="9BF-Se-qX4" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="9" id="UJH-CF-qVP"/>
+                            <constraint firstItem="7nj-OV-lnI" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Vvx-uZ-Nsz"/>
+                            <constraint firstItem="Gl9-en-7BF" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="XN5-Km-kek"/>
+                            <constraint firstItem="7nj-OV-lnI" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="bac-NA-ZIa"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="N68-VJ-xKC" secondAttribute="bottom" constant="8" id="e81-tg-J3T"/>
+                            <constraint firstItem="9BF-Se-qX4" firstAttribute="top" secondItem="Ruk-tr-03J" secondAttribute="bottom" constant="3" id="ggQ-Gn-VQY"/>
+                            <constraint firstItem="Ruk-tr-03J" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="huT-aX-ulQ"/>
+                            <constraint firstItem="N68-VJ-xKC" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="l1b-He-00P"/>
+                            <constraint firstItem="7nj-OV-lnI" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="m4I-vF-oOe"/>
+                            <constraint firstItem="XOP-Hr-9vi" firstAttribute="top" secondItem="9BF-Se-qX4" secondAttribute="bottom" constant="8" id="nt2-0F-8sH"/>
+                            <constraint firstItem="Ruk-tr-03J" firstAttribute="top" secondItem="7nj-OV-lnI" secondAttribute="bottom" constant="20" id="qtd-9a-6MW"/>
+                            <constraint firstItem="Ruk-tr-03J" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="yYt-ju-u8E"/>
+                            <constraint firstItem="N68-VJ-xKC" firstAttribute="top" secondItem="Gl9-en-7BF" secondAttribute="bottom" constant="6" id="ymH-UU-aGL"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="XOP-Hr-9vi" secondAttribute="trailing" constant="9" id="yr9-Uf-KU9"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="enterTempLabel" destination="Ruk-tr-03J" id="yq9-hJ-HJu"/>
+                        <outlet property="imageView" destination="XOP-Hr-9vi" id="h4r-ev-chx"/>
+                        <outlet property="outputLabel" destination="Gl9-en-7BF" id="uXs-lC-O6S"/>
+                        <outlet property="segmentChanger" destination="N68-VJ-xKC" id="T7h-Fl-Ime"/>
+                        <outlet property="textField" destination="9BF-Se-qX4" id="OJ3-3X-QXD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="33.75" y="35.91549295774648"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Temp1" width="263" height="943"/>
+    </resources>
+</document>
