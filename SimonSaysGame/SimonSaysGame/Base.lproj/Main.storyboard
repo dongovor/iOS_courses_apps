@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SimonSaysGame" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="7uJ-Lx-HlX">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SimonSays" translatesAutoresizingMaskIntoConstraints="NO" id="Q3W-cS-g79">
+                                <rect key="frame" x="16" y="20" width="288" height="198.5"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time left: 10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cbq-bz-sLA">
+                                <rect key="frame" x="16" y="226.5" width="136" height="51"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="136" id="1GU-HA-qNh"/>
+                                    <constraint firstAttribute="height" constant="51" id="P0X-N9-gzM"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="GillSans-Bold" family="Gill Sans" pointSize="19"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score: 0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n0f-Cv-Hba">
+                                <rect key="frame" x="168" y="226.5" width="136" height="51"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="51" id="X3w-SC-Yd0"/>
+                                    <constraint firstAttribute="width" constant="136" id="mOO-lG-RDu"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="GillSans-Bold" family="Gill Sans" pointSize="19"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bcO-9L-3Yq">
+                                <rect key="frame" x="16" y="495" width="288" height="65"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="65" id="xgZ-S2-ovM"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="GillSans-Bold" family="Gill Sans" pointSize="30"/>
+                                <state key="normal" title="Start Game">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="startGame:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rQ0-oh-K1R"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Simon Says" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="Kin-Rt-dmE">
+                                <rect key="frame" x="16" y="288.5" width="288" height="198.5"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.34999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="GillSans-Bold" family="Gill Sans" pointSize="40"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="n0f-Cv-Hba" firstAttribute="leading" secondItem="Cbq-bz-sLA" secondAttribute="trailing" constant="16" id="5VB-3n-HFY"/>
+                            <constraint firstItem="n0f-Cv-Hba" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="6yp-La-qCh"/>
+                            <constraint firstItem="bcO-9L-3Yq" firstAttribute="top" secondItem="Kin-Rt-dmE" secondAttribute="bottom" constant="8" id="AAa-Th-Bwd"/>
+                            <constraint firstItem="Kin-Rt-dmE" firstAttribute="top" secondItem="Cbq-bz-sLA" secondAttribute="bottom" constant="11" id="FsK-az-nwm"/>
+                            <constraint firstItem="Q3W-cS-g79" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="GGm-Hr-Ee0"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="7uJ-Lx-HlX" secondAttribute="bottom" id="Jp4-7T-RvZ"/>
+                            <constraint firstItem="bcO-9L-3Yq" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="KVN-AX-9ZM"/>
+                            <constraint firstItem="Q3W-cS-g79" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="KrC-3a-4Dz"/>
+                            <constraint firstItem="n0f-Cv-Hba" firstAttribute="top" secondItem="Q3W-cS-g79" secondAttribute="bottom" constant="8" id="NDr-Z8-hgv"/>
+                            <constraint firstItem="Q3W-cS-g79" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="Pux-oe-mhs"/>
+                            <constraint firstItem="7uJ-Lx-HlX" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="RPQ-O5-pq3"/>
+                            <constraint firstItem="Cbq-bz-sLA" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="TAU-bC-XJR"/>
+                            <constraint firstItem="Kin-Rt-dmE" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="W5B-r4-mI5"/>
+                            <constraint firstItem="bcO-9L-3Yq" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="X1d-bE-X3U"/>
+                            <constraint firstItem="Kin-Rt-dmE" firstAttribute="top" secondItem="n0f-Cv-Hba" secondAttribute="bottom" constant="11" id="ZJW-9Y-jsb"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="bcO-9L-3Yq" secondAttribute="bottom" constant="8" id="cHj-oK-1Cp"/>
+                            <constraint firstAttribute="trailing" secondItem="7uJ-Lx-HlX" secondAttribute="trailing" id="dpn-nh-hP0"/>
+                            <constraint firstItem="7uJ-Lx-HlX" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="gDp-rw-Lvj"/>
+                            <constraint firstItem="Cbq-bz-sLA" firstAttribute="top" secondItem="Q3W-cS-g79" secondAttribute="bottom" constant="8" id="gFN-p4-Ode"/>
+                            <constraint firstItem="Kin-Rt-dmE" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="jQb-xv-FYu"/>
+                            <constraint firstItem="Kin-Rt-dmE" firstAttribute="height" secondItem="Q3W-cS-g79" secondAttribute="height" id="kZH-Qb-TEU"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="label" destination="Kin-Rt-dmE" id="UWu-0Y-fj9"/>
+                        <outlet property="scoreLabel" destination="n0f-Cv-Hba" id="hiZ-dr-xQa"/>
+                        <outlet property="startGameButton" destination="bcO-9L-3Yq" id="wMg-4C-vVK"/>
+                        <outlet property="timeLabel" destination="Cbq-bz-sLA" id="0Gf-M0-z6j"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="172.5" y="133.09859154929578"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Background" width="1920" height="1200"/>
+        <image name="SimonSays" width="1000" height="707"/>
+    </resources>
+</document>
